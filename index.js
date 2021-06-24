@@ -4,6 +4,10 @@ const input = process.argv[2];
 
 const languageCode = franc(input);
 
-const language=langs.where("3", languageCode);
-
-console.log(language.name);
+if(languageCode==='und'){
+    console.log('SORRY ,TRY WITH MORE SAMPLE TEXT');
+}
+else{
+    const language=langs.where("3", languageCode);
+    console.log(language.name);
+}
